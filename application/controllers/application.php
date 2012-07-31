@@ -5,5 +5,6 @@ class Application_Controller extends Ultralight_Controller {
     parent::__construct() ;
     $this->_view->title = "Ultralight MVC" ;
     $this->_view->set_layout(APPLICATION_ROOT . '/views/layout.tpl.php') ;
+    $this->db = Ultralight_Db::factory($GLOBALS['db_args']) ;
   }
 }
